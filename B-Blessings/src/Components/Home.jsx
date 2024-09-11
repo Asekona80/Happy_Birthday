@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar'; // Adjust the import path as needed
+import Navbar from './Navbar'; 
 
 const HomePage = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -13,17 +13,17 @@ const HomePage = () => {
       <Navbar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       
       {/* Main Content */}
-      <div className="flex-grow flex flex-col items-center justify-center">
+      <div className={`flex-grow flex flex-col items-center justify-center px-4 py-8 md:px-8 md:py-12 ${isDarkTheme ? 'bg-[#1a1a1a] shadow-lg' : 'bg-[#ffffff] shadow-lg'} rounded-lg border border-transparent border-white backdrop-blur-md`}>
         {/* Header Section */}
         <header className="text-center mb-12">
           <h1 className={`text-4xl md:text-6xl font-bold mb-4 ${isDarkTheme ? 'text-[#ffffff]' : 'text-[#2b2d42]'}`}>
             Happy 30th Birthday, My Love!
           </h1>
-          <p className={`text-lg md:text-xl mb-8 ${isDarkTheme ? 'text-[#0095D9]' : 'text-[#0095D9]'}`}>
+          <p className={`text-lg md:text-xl mb-8 ${isDarkTheme ? 'text-[#f2f5f7]' : 'text-[#0095D9]'}`}>
             Celebrating three amazing decades of your life. Explore our special moments and join us in making this day unforgettable!
           </p>
           <a href="#memories">
-            <button className={`py-3 px-6 rounded-lg text-lg transition-all duration-300 ${isDarkTheme ? 'bg-[#FF0000] text-[#ffffff] hover:bg-[#d80000]' : 'bg-[#0095D9] text-[#ffffff] hover:bg-[#007bb5]'}`}>
+            <button className={`py-3 px-6 rounded-lg text-lg transition-all duration-300 ${isDarkTheme ? 'bg-[#b33333] text-[#ffffff] hover:bg-[#b33333]' : 'bg-[#0095D9] text-[#ffffff] hover:bg-[#007bb5]'}`}>
               Explore Our Memories
             </button>
           </a>
